@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Report</title>
+  </head>
+  <body>
+    <h1>Word count</h1>
+    <h2>The original text is:<br /></h2>
+    {{ourtext}}
+    <br />
+    <h2>The text has {{countnum}} words.</h2>
+    The total count of each word is <br />
+    {% for word,count in worddict %}
+    {{word}} - {{count}}
+    <br>
+    {% endfor %}
+    <a href="{% url 'home' %}">Try Again</a>
+    <!-- {{worddict}} -->
+  </body>
+</html>
